@@ -14,3 +14,9 @@ class FaceDetection(TemplateView):
         context["detectResult"] = datetime.datetime.now().strftime("%Y/%m/%d, %a, %I:%M %p")
 
         return context
+    def detect(self):
+        result = {
+                "Success":False,
+                "date":datetime.datetime.now().strftime("%Y/%m/%d, %a, %I:%M %p"),
+            }
+        return JsonResponse(result)

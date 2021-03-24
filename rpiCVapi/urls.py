@@ -20,5 +20,6 @@ from face_detection.views import FaceDetection
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',FaceDetection.as_view(),name='home')
+    path('',FaceDetection.as_view(),name='home'),
+    path('facedetection/',FaceDetection.detect,name='detect')
 ]
