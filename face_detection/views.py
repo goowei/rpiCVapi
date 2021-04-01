@@ -12,7 +12,6 @@ class FaceDetection(TemplateView):
         # working with variables in templates
         context = super().get_context_data(**kwargs)
         context["detectResult"] = datetime.datetime.now().strftime("%Y/%m/%d, %a, %I:%M %p")
-
         return context
     def detect(self):
         result = {

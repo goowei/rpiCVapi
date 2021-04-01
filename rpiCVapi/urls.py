@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
 from face_detection.views import FaceDetection
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #
     path('',FaceDetection.as_view(),name='home'),
+    # call a method in the view.py
     path('facedetection/',FaceDetection.detect,name='detect')
 ]
